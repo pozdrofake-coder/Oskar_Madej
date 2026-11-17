@@ -1,0 +1,265 @@
+.strona {
+  min-height: 100vh;
+  padding: 12px;
+  background: var(--tlo);
+  color: var(--tekst);
+}
+
+.jasny {
+  --tlo: #f0f0f0;
+  --karta: #fff;
+  --tekst: #222;
+  --pole: #fff;
+  --linia: #aaa;
+}
+
+.ciemny {
+  --tlo: #333;
+  --karta: #444;
+  --tekst: #fff;
+  --pole: #444;
+  --linia: #666;
+}
+
+.kontener {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.naglowek {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px;
+  border: 1px solid #999;
+  background: #ddd;
+}
+
+.marka {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #222;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.marka img {
+  width: 42px;
+  height: 42px;
+  border-radius: 3px;
+  object-fit: cover;
+}
+
+.naglowek nav {
+  display: flex;
+  gap: 12px;
+}
+
+.naglowek nav a {
+  color: #0000ee;
+  font-size: 14px;
+}
+
+.motyw-button {
+  padding: 8px 11px;
+  border: 1px solid #888;
+  background: #eee;
+  color: #222;
+  cursor: pointer;
+}
+
+.baner {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 10px;
+  padding: 16px;
+  border: 1px solid #999;
+  background: #f5f5f5;
+  color: #222;
+}
+
+.maly-tytul {
+  margin: 0;
+  color: #6a5a32;
+  font-size: 13px;
+}
+
+.baner h1 {
+  margin: 8px 0;
+  font-size: 32px;
+}
+
+.opis-baner {
+  max-width: 510px;
+  margin: 0 0 15px;
+  line-height: 1.5;
+}
+
+.button {
+  padding: 8px 12px;
+  border: 1px solid #888;
+  background: #eee;
+  color: #222;
+  cursor: pointer;
+}
+
+.button:hover,
+.motyw-button:hover {
+  background: #ddd;
+}
+
+.rysunek {
+  display: none;
+}
+
+.powitanie {
+  margin: 16px 3px 0;
+  font-weight: bold;
+}
+
+.cytat {
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px solid #bbb;
+  background: var(--karta);
+}
+
+.cytat h2,
+.cytat p {
+  margin: 0;
+}
+
+.cytat h2 {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.kolekcja {
+  margin-top: 18px;
+}
+
+.kolekcja-naglowek {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.kolekcja-naglowek h2 {
+  margin: 0 auto 0 0;
+  font-size: 25px;
+}
+
+.kolekcja-naglowek label {
+  font-size: 14px;
+}
+
+.kolekcja-naglowek input {
+  width: 200px;
+  padding: 7px;
+  border: 1px solid #888;
+  background: var(--pole);
+  color: var(--tekst);
+}
+
+.lista {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.karta {
+  overflow: hidden;
+  padding: 8px;
+  border: 1px solid #aaa;
+  background: var(--karta);
+}
+
+.karta img {
+  width: 100%;
+  height: 155px;
+  display: block;
+  object-fit: cover;
+}
+
+.karta h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+}
+
+.karta p {
+  min-height: 42px;
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.tag {
+  display: inline-block;
+  padding: 3px 6px;
+  background: #eee;
+  color: #333;
+  font-size: 12px;
+}
+
+.ciemny .tag {
+  background: #485c66;
+  color: #f3f3f3;
+}
+
+.brak {
+  grid-column: 1 / -1;
+  padding: 20px;
+  border-radius: 8px;
+  background: var(--karta);
+}
+
+.stopka {
+  margin-top: 25px;
+  padding: 14px;
+  border-top: 1px solid var(--linia);
+  color: var(--tekst);
+  font-size: 13px;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .lista {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .naglowek {
+    flex-wrap: wrap;
+  }
+
+  .naglowek nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .baner {
+    padding: 22px;
+  }
+
+  .rysunek {
+    display: none;
+  }
+
+  .lista {
+    grid-template-columns: 1fr;
+  }
+
+  .kolekcja-naglowek input {
+    width: 100%;
+  }
+}
